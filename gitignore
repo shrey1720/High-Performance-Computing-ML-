@@ -1,0 +1,25 @@
+# Compiled binaries
+*.exe
+*.out
+*.o
+*.obj
+*.a
+*.lib
+*.dll
+*.so
+*.dylib
+
+# Build directories
+build/
+dist/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# IDE/editor
+.vscode/
+.idea/
+*.code-workspace
