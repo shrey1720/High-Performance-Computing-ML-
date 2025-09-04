@@ -2,7 +2,7 @@
 -------------------------------------------------------------------------
 %%writefile hello.cu
 
-#include
+#include<stdio.h>
 __global__ void hello(void)
 {
     printf("GPU: Hello!\n");
