@@ -1,6 +1,6 @@
 %%writefile addtion_on_device.cu
 
-#include
+#include<stdio.h>
 __global__ void add(int *a, int *b, int *c) {
 		*c = *a + *b;
 }
@@ -38,7 +38,7 @@ int main(void) {
 -------------------------------------------------------------
 %%writefile P_AOD.cu
 
-#include
+#include<stdio.h>
 #define N 512
 __global__ void add(int *a, int *b, int *c) {
 		c[blockIdx.x] = a[blockIdx.x] + b[blockIdx.x];
