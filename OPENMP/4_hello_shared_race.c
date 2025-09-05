@@ -1,6 +1,6 @@
 #include <omp.h>
 #include <stdio.h>
-void main()
+int main()
 {
 int numt, tid;
 #pragma omp parallel

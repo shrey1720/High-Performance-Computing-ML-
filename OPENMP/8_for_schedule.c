@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<omp.h>
 #define ARR_SIZE 10
-void main()
+int main()
 {
 int j, tid ;
 int a[ARR_SIZE] ;
