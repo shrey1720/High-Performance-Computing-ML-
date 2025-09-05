@@ -5,7 +5,7 @@ int tid ;
 
 #pragma omp threadprivate( tid )
 
-void main()
+int main()
 {
 int numt ;
 

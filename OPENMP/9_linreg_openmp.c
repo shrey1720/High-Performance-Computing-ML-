@@ -38,7 +38,7 @@ void parallel_linear_regression(double *X, double *Y, double *w, double *b, int 
     }
 }
 
-void main() {
+int main() {
     double *X = (double *)malloc(N * sizeof(double));
     double *Y = (double *)malloc(N * sizeof(double));
     generate_data(X, Y);

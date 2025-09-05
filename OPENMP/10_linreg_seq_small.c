@@ -21,7 +21,7 @@ void linear_regression(double X[], double Y[], double *w, double *b) {
     }
 }
 
-void main() {
+int main() {
     double X[N] = {1, 2, 3, 4, 5};
     double Y[N] = {2, 4, 6, 8, 10};
     double w = 0.0, b = 0.0;

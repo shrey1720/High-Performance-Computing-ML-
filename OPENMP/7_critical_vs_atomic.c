@@ -66,7 +66,7 @@ void perform_operation_with_atomic(int *arr, int size) {
     printf("Atomic - Sum: %d, Time: %.6f seconds\n", sum, end_time - start_time);
 }
 
-void main() {
+int main() {
     int *arr = (int *)malloc(SIZE * sizeof(int));
     for (int i = 0; i < SIZE; i++) {
         arr[i] = 1;
