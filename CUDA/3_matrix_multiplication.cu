@@ -1,5 +1,5 @@
 %%writefile mm-cpu.cu
-  
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -115,7 +115,7 @@ int main() {
     cudaMemcpy(d_B, h_B, size, cudaMemcpyHostToDevice);
 
     // Launch kernel: N blocks, 1 thread per block
-    matMulKernel<<>>(d_A, d_B, d_C, N);
+    matMulKernel<<<N, 1>>>(d_A, d_B, d_C, N);
 
     // Copy result back to host
     cudaMemcpy(h_C, d_C, size, cudaMemcpyDeviceToHost);
