@@ -16,12 +16,6 @@ float distance(float x1, float y1, float x2, float y2) {
     float dx = x1 - x2;
     float dy = y1 - y2;
     float d = dx*dx + dy*dy;
-
-    // Strong artificial delay to slow down CPU
-    for (volatile int k = 0; k < 5000; k++) {
-        d += 0.0000001f * d;  // floating-point math to avoid compiler optimization
-    }
-
     return sqrt(d);
 }
 
