@@ -1,22 +1,22 @@
 #include <omp.h>
 #include <stdio.h>
 
-int tid ;
+void main() {
+    int numt;
 
-#pragma omp threadprivate( tid )
+    #pragma omp parallel
+    {
+        int tid = omp_get_thread_num();
 
-int main()
-{
-int numt ;
-#pragma omp parallel default( shared )
-{
-tid = omp_get_thread_num() ;
-if ( tid == 0 )
-{
-for(int j = 0 ; j < 10000000 ; j++ ) ;
-numt = omp_get_num_threads() ;
-}
-#pragma omp barrier
-printf( "Hello World from thread %d of %d.\n", tid, numt ) ;
-}
+        if (tid == 0)
+        {
+            for (int j = 0; j < 10000000; j++);
+            numt = omp_get_num_threads();
+        }
+
+        #pragma omp barrier
+        printf("Hello World from thread %d of %d.\n", tid, numt);
+    }
+
+    return;
 }
