@@ -36,7 +36,7 @@ Supported Operations with omp atomic
 #include <omp.h>
 
 #define SIZE 1000000
-#define THREADS 8
+#define THREADS 12
 
 void perform_operation_with_critical(int *arr, int size) {
     int sum = 0;
@@ -78,4 +78,5 @@ int main() {
     perform_operation_with_atomic(arr, SIZE);
 
     free(arr);
+    return;
 }
